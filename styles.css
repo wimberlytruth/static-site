@@ -1,0 +1,27 @@
+pre {
+  font-size: 18px;
+  font-family: "Times New Roman", serif;
+  /* The following lines turn on wordwrap */
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.annotation, .anno {
+  font-style: oblique;
+  font-weight: bold;
+  background-color: coral;
+}
+
+/* the <hr> tag is only used where pages are missing */
+hr {
+  margin-left: 0px;
+  color: white;
+  background-color: white;
+  border: 0px;
+  height: 10px;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
