@@ -25,4 +25,4 @@ pdf files. don't count/number the tags -- it's a hassle and you can
 easily count them with ctrl+F, using the tag for a query. also, remember 
 to include the underlining. 
 
-8. Run Chrome spellcheck on the five html files.
+8. Run spellcheck on the five html files.
