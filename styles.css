@@ -25,3 +25,18 @@ hr {
   box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 }
 
+.quoteLink {
+  text-decoration: none;
+  color:grey;
+}
+
+.quoteLink:link {
+  text-decoration: none;
+  color:grey;
+}
+
+.quoteLink:visited {
+  text-decoration: none;
+  color:grey;
+}
+
