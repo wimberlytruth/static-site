@@ -51,7 +51,11 @@ a:visited {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
+  background-color: yellow;
 }
 
 section div {
@@ -59,3 +63,9 @@ section div {
   border: 5px solid black;
 }
 
+header {
+  display:flex; 
+  flex-direction:column; 
+  align-items:center; 
+  border:5px solid red;
+}
