@@ -12,7 +12,7 @@ html {
 }
 
 pre {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Liberation Sans";
   /* The following lines turn on wordwrap */
   white-space: pre-wrap;       /* Since CSS 2.1 */
@@ -23,9 +23,7 @@ pre {
 }
 
 .annotation, .anno {
-  font-style: oblique;
-  font-weight: bold;
-  background-color: coral;
+  background-color: yellow;
 }
 
 /* the <hr> tag is only used where pages are missing */
@@ -68,6 +66,5 @@ section div {
 header {
   display:flex; 
   flex-direction:column; 
-  align-items:center; 
-  border:5px solid red;
+  align-items:center;
 }
