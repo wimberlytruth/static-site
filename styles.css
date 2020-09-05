@@ -26,17 +26,14 @@ hr {
 }
 
 .quoteLink {
-  text-decoration: none;
   color:grey;
 }
 
-.quoteLink:link {
+a:link {
   text-decoration: none;
-  color:grey;
 }
 
-.quoteLink:visited {
+a:visited {
   text-decoration: none;
-  color:grey;
 }
 
