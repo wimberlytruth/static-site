@@ -4,7 +4,6 @@ html {
 
 .phone-screen {
   width: 100%;
-  max-width: 450px;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -40,7 +39,7 @@ hr {
 }
 
 .quoteLink {
-  color:olive;
+  color:grey;
 }
 
 a:link {
