@@ -13,7 +13,7 @@ html {
 
 pre {
   font-size: 20px;
-  font-family: "Source Sans Pro";
+  font-family: "Liberation Sans";
   /* The following lines turn on wordwrap */
   white-space: pre-wrap;       /* Since CSS 2.1 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -55,13 +55,13 @@ section {
   flex-direction: column;
   flex-wrap: wrap;
   /*align-items: center;*/
-  background-color: olive;
+  background-color: grey;
 }
 
 section div {
   display: flex;
   width: 100%;
-  border: 5px solid black;
+  border: 5px solid grey;
   justify-content: center;
 }
 
