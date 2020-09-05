@@ -54,13 +54,15 @@ section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  /*align-items: center;*/
   background-color: yellow;
 }
 
 section div {
+  display: flex;
   width: 100%;
   border: 5px solid black;
+  justify-content: center;
 }
 
 header {
