@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  border: 1px solid black;
 }
 
 .phone-screen {
@@ -9,6 +10,7 @@ html {
   margin: auto;
   color: #f6f6f6;
   background-color: #121212;
+  border: 3px solid red;
 }
 
 pre {
@@ -23,7 +25,7 @@ pre {
 }
 
 .logoRow {
-  border:1px solid black; 
+  font-family: 'Roboto Slab', serif; 
   padding-right:20px; 
   padding-left:5px; 
   background-color:#121212;
@@ -74,6 +76,7 @@ header {
   display:flex; 
   flex-direction:column; 
   align-items:center;
+  position:relative;
 }
 
 blockquote {
@@ -81,7 +84,5 @@ blockquote {
   text-align:justify; 
   text-justify:inter-word; 
   margin:0; 
-  padding:5px; 
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
+  padding:5px;
 }
