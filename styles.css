@@ -1,6 +1,13 @@
-html {
+* {
   box-sizing: border-box;
+}
+
+html {
   border: 1px solid black;
+}
+
+body {
+  margin: 0;
 }
 
 .phone-screen {
@@ -22,13 +29,6 @@ pre {
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
-
-.logoRow {
-  font-family: 'Roboto Slab', serif; 
-  padding-right:20px; 
-  padding-left:5px; 
-  background-color:#121212;
 }
 
 .annotation, .anno {
@@ -77,6 +77,19 @@ header {
   flex-direction:column; 
   align-items:center;
   position:relative;
+  border: 7px solid goldenrod;
+}
+
+.logo {
+  border: 7px solid darkolivegreen;
+}
+
+.logoRow {
+  font-family: 'Roboto Slab', serif; 
+  padding-right:20px; 
+  padding-left:5px; 
+  /*background-color:#121212;*/
+  background-color: darkolivegreen;
 }
 
 blockquote {
@@ -85,4 +98,5 @@ blockquote {
   text-justify:inter-word; 
   margin:0; 
   padding:5px;
+  border:1px solid white;
 }
