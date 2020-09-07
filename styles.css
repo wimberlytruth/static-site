@@ -74,13 +74,13 @@ section div {
 
 header {
   display:flex;
-  justify-content: space-between;
-  position:relative;
+  justify-content: center;
   border: 7px solid goldenrod;
 }
 
 .logo {
   border: 7px solid lightslategray;
+  border-right-style: none;
 }
 
 .logoRow {
