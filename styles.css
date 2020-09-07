@@ -2,11 +2,7 @@
   box-sizing: border-box;
 }
 
-html {
-  border: 1px solid black;
-}
-
-body {
+html, body {
   margin: 0;
 }
 
@@ -18,6 +14,7 @@ body {
   color: #f6f6f6;
   /*background-color: #121212;*/
   background-color: lightgray;
+  min-height: 100vh; /* Wes Bos, Flexbox series, video 6 */
 }
 
 pre {
@@ -75,7 +72,7 @@ section div {
 header {
   display:flex;
   justify-content: center;
-  border: 7px solid goldenrod;
+  border: 7px solid mistyrose;
 }
 
 .logo {
@@ -84,6 +81,7 @@ header {
 }
 
 .logoRow {
+  color: lightgray;
   font-family: 'Roboto Slab', serif; 
   padding-right:20px; 
   padding-left:5px; 
