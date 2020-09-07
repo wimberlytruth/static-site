@@ -98,7 +98,7 @@ section div div {
 .panel { 
   padding-left:40px; 
   padding-right: 40px;
-  /* display:none;  */
+  display:none;
 }
 
 .active, .accordion:hover {
