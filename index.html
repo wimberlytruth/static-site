@@ -33,7 +33,7 @@
 
       <section>
   
-        <div style="padding-left:20px;">In Matt's Own Words</div>
+        <button class="accordion">In Matt's Own Words</button>
         <div class="dropdown-subcontainer">
           <div><a href="affidavit.html">Affidavit of Matthew Paul Wimberly</a></div>
           <div><a href="preface.html">Preface</a></div>
@@ -43,7 +43,7 @@
   
       <section>
   
-        <div style="padding-left:20px;">Documents</div>
+        <button class="accordion">Documents</button>
         <div class="dropdown-subcontainer">
           <div><a href="definitions.html">Legal Definitions</a></div>
           <div><a href="https://drive.google.com/file/d/1ephUIs0c2f4mOVZaZVpYD0uitX_eN8cS/view?usp=sharing">D.A. knew of NBOMe before trial</a></div>
@@ -58,7 +58,7 @@
   
       <section>
   
-        <div style="padding-left:20px;">Articles</div>
+        <button class="accordion">Articles</button>
         <div class="dropdown-subcontainer">
           <div><a href="https://www.rnz.co.nz/news/the-wireless/373143/on-a-bad-buzz-warnings-about-synthetic-drug-nbome">Beware of synthetic drug NBOMe</a></div>
           <div><a href="https://www.stuff.co.nz/national/health/67867839/wellington-hospital-alarmed-by-spate-of-patients-gone-nuts-on-fake-acid">Spate of patients gone 'Nuts' on fake acid</a></div>
@@ -74,7 +74,7 @@
   
       <section>
   
-        <div style="padding-left:20px;">Transcripts</div>
+        <button class="accordion">Transcripts</button>
         <div class="dropdown-subcontainer">
           <div><a href="/transcripts/malter.html">Justin Malter</a></div>
           <div><a href="/transcripts/langston.html">Andrew Langston</a></div>
@@ -100,5 +100,21 @@
     </div>
   </div>
 
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
 </body>
 </html>
