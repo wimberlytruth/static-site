@@ -10,8 +10,9 @@ html, body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: auto;
-  color: #f6f6f6;
+  color: #121212;
   /*background-color: #121212;*/
   background-color: lightgray;
   min-height: 100vh; /* Wes Bos, Flexbox series, video 6 */
@@ -59,13 +60,14 @@ section {
   flex-direction: column;
   flex-wrap: wrap;
   /*align-items: center;*/
-  background-color: lightgrey;
+  /*background-color: #D9D9D9;*/
+  background-color: lightgray;
 }
 
 section div {
   display: flex;
   width: 100%;
-  border: .1px solid mistyrose;
+  border-top: .1px solid mistyrose;
   justify-content: center;
 }
 
