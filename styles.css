@@ -16,6 +16,7 @@ html, body {
   /*background-color: #121212;*/
   background-color: lightgray;
   min-height: 100vh; /* Wes Bos, Flexbox series, video 6 */
+  max-width: 450px;
 }
 
 pre {
