@@ -78,18 +78,20 @@ section div div {
   border-top: .1px solid mistyrose;
 }
 
+.dropdown-subcontainer { 
+  padding-left:40px; 
+  /* display:none;  */
+}
+
 header {
   display:flex;
   justify-content: space-between;
-  border: 3px solid lightslategray; /*header is a flex item in phone-screen w/ flxdir: column;
-    so header will spread out horizontally. The border is a helpful visual reminder. */
   margin-bottom: 30px;
   border-radius: 5px;
   width: 100%;
 }
 
 .logo {
-  border-right-style: none;
   display:flex; 
   flex-direction:column; 
   justify-content:flex-start;
