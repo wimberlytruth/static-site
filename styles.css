@@ -4,14 +4,14 @@
 
 html, body {
   margin: 0;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .phone-screen {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin: auto;
   color: #121212;
   /*background-color: #121212;*/
@@ -64,25 +64,32 @@ section {
   /*align-items: center;*/
   /*background-color: #D9D9D9;*/
   background-color: lightgray;
+  border: 1px solid black;
+  width: 100%;
 }
 
 section div {
-  display: flex;
+  /*display: flex;*/
   width: 100%;
+  /*justify-content: flex-start;*/
+  line-height: 3em;
+}
+
+section div div {
   border-top: .1px solid mistyrose;
-  justify-content: center;
 }
 
 header {
   display:flex;
-  justify-content: center;
-  border: 7px solid mistyrose; /*header is a flex item in phone-screen w/ flxdir: column;
+  justify-content: space-between;
+  border: 3px solid lightslategray; /*header is a flex item in phone-screen w/ flxdir: column;
     so header will spread out horizontally. The border is a helpful visual reminder. */
   margin-bottom: 30px;
+  border-radius: 5px;
+  width: 100%;
 }
 
 .logo {
-  border: 3px solid lightslategray;
   border-right-style: none;
   display:flex; 
   flex-direction:column; 
@@ -94,6 +101,9 @@ header {
   font-family: 'Roboto Slab', serif; 
   /*background-color:#121212;*/
   background-color: lightslategray;
+  padding-right: 20px;
+  padding-left: 5px;
+  font-size: 24px;
 }
 
 blockquote {
@@ -102,6 +112,5 @@ blockquote {
   text-justify:inter-word; 
   margin:0; 
   padding:50px;
-  max-width: 280px;
   margin: auto;
 }
