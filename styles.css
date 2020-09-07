@@ -43,7 +43,7 @@ hr {
 }
 
 .quoteLink {
-  color:white;
+  color:black;
 }
 
 a:link {
@@ -94,10 +94,11 @@ header {
 }
 
 blockquote {
-  color:white; 
+  color:black; 
   text-align:justify; 
   text-justify:inter-word; 
   margin:0; 
-  padding:5px;
-  border:1px solid white;
+  padding-top:50px;
+  max-width: 280px;
+  margin: auto;
 }
