@@ -16,7 +16,8 @@ html, body {
   color: #121212;
   /*background-color: #121212;*/
   background-color: lightgray;
-  height: 100vh; /* Wes Bos, Flexbox series, video 6 */
+  /*min-height: 100vh; Wes Bos, Flexbox series, video 6 */
+  height: 100vh;
   max-width: 450px;
 }
 
@@ -89,7 +90,7 @@ section div div {
 header {
   display:flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   border-radius: 5px;
   width: 100%;
 }
