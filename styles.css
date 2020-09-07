@@ -76,10 +76,9 @@ section div {
 header {
   display:flex;
   justify-content: center;
-  /*border: 7px solid mistyrose; header is a flex item in phone-screen w/ flxdir: column;
-    so header will spread out horizontally. The border is a helpful visual reminder. 
-
-  also, if i you*/
+  border: 7px solid mistyrose; /*header is a flex item in phone-screen w/ flxdir: column;
+    so header will spread out horizontally. The border is a helpful visual reminder. */
+  margin-bottom: 30px;
 }
 
 .logo {
