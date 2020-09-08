@@ -1,16 +1,14 @@
-// https://www.youtube.com/watch?v=LB70WzwBCTo
+// https://www.youtube.com/watch?v=JEBgqbZWYIQ
 
-var prevScrollpos = window.pageYOffset;
+var lastScrollTop = 0;
 
-window.onscroll = function() {
-  var currentScrollpos = window.pageYOffset;
-  //var navbar = document.getElementById('navbar');
-  if (prevScrollpos > currentScrollpos) {
-    document.getElementById('navbar').style.top = "0";
-    //navbar.style.top = "0";
+window.addEventListener("scroll", function() {
+  var navbar = document.getElementById('navbar');
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    navbar.style.top = "-80px";
   } else {
-    document.getElementById('navbar').style.top = "-100px";
-    //navbar.style.top = "-100px";
+    navbar.style.top = "0";
   }
-  prevScrollpos = currentScrollpos;
-};
+  lastScrollTop = scrollTop;
+})

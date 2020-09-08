@@ -11,7 +11,7 @@ body {
   background: #fff;
 }
 
-.navbar {
+#navbar {
   background: lightseagreen;
   position: fixed;
   top: 0;
@@ -28,7 +28,7 @@ body {
   margin: auto;
   color: #121212;
   /*background-color: #121212;*/
-  background-color: lightgray;
+  /*background-color: lightgray;*/
   /* min-height: 100vh;  Wes Bos, Flexbox series, video 6 */
   height: 100vh;
   max-width: 450px;
@@ -56,6 +56,10 @@ body {
     display: inline;
     content: url("notes.png");
     zoom:6%;
+}
+
+.notes span {
+  display: none;
 }
 
 /* the <hr> tag is only used where pages are missing */
