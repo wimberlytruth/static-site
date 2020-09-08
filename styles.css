@@ -4,7 +4,20 @@
 
 html, body {
   margin: 0;
-  font-size: 16px;
+}
+
+body {
+  font-family: Poppins;
+  background: #fff;
+}
+
+.navbar {
+  background: lightseagreen;
+  position: fixed;
+  top: 0;
+  max-width: 450px;
+  width: 100%;
+  transition: top 0.8s;
 }
 
 .phone-screen {
@@ -16,28 +29,31 @@ html, body {
   color: #121212;
   /*background-color: #121212;*/
   background-color: lightgray;
-  /*min-height: 100vh; Wes Bos, Flexbox series, video 6 */
-  /*height: 100vh;*/
+  /* min-height: 100vh;  Wes Bos, Flexbox series, video 6 */
+  height: 100vh;
   max-width: 450px;
 }
 
-pre {
+
+/* 
+  //This was a very useful block of css at the time.
+  pre {
   font-size: 16px;
   font-family: "Liberation Sans";
-  /* The following lines turn on wordwrap */
-  white-space: pre-wrap;       /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
-}
+  //The following lines turn on wordwrap
+  white-space: pre-wrap;       // Since CSS 2.1
+  white-space: -moz-pre-wrap;  // Mozilla, since 1999
+  white-space: -pre-wrap;      // Opera 4-6
+  white-space: -o-pre-wrap;    // Opera 7
+  word-wrap: break-word;       // Internet Explorer 5.5+
+} */
 
 .highlight {
   background-color: yellow;
 }
 
 .notes {
-    display: block;
+    display: inline;
     content: url("notes.png");
     zoom:6%;
 }
@@ -63,8 +79,16 @@ a:link {
 a:visited {
   text-decoration: none;
 }
-.content {
+
+/*.content {
   overflow-y: scroll;
+}*/
+
+
+.content {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
 }
 
 section {
