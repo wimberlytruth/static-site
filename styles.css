@@ -37,9 +37,9 @@ pre {
 }
 
 .notes {
+    display: block;
     content: url("notes.png");
     zoom:6%;
-    background-color: #cccccc;
 }
 
 /* the <hr> tag is only used where pages are missing */
