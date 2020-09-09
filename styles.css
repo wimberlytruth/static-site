@@ -52,21 +52,28 @@ body {
   background-color: yellow;
 }
 
+/*
 .note {
   display: inline-block;
-}
-/*.note-button {
-    content: url("notes.png");
-    zoom:6%;
 }*/
+
 .note-popup {
   visibility: hidden;
   border: 1px solid black;
 }
 
-.note:hover .note-popup {
+.note-button:hover + .note-popup { /*this works!*/
   visibility: visible;
 }
+
+.note .note-popup.open {     /* this works! */
+  visibility: visible;
+}
+/*.note-button {
+    content: url("notes.png");
+    zoom:6%;
+}*/
+
 
 /* the <hr> tag is only used where pages are missing */
 hr {
