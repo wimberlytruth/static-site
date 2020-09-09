@@ -62,14 +62,15 @@ body {
   border: 1px solid black;
 }
 
-/* .note-button:hover + .note-popup {  //this works!
-  visibility: visible;
-} */
-
-.note .note-popup.open {     /* this works! */
+.note-button:hover + .note-popup {
   visibility: visible;
 }
-/*.note-button {
+
+/*
+.note .note-popup.open { 
+  visibility: visible;
+}
+.note-button {
     content: url("notes.png");
     zoom:6%;
 }*/
