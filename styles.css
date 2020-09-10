@@ -52,19 +52,18 @@ body {
   background-color: yellow;
 }
 
-/*
-.note {
-  display: inline-block;
-}*/
-
 .note-popup {
   visibility: hidden;
   border: 1px solid black;
 }
 
-.note-button:hover + .note-popup {
+.note > .open {
   visibility: visible;
 }
+
+/*.note-button:hover + .note-popup {
+  visibility: visible;
+}*/
 
 /*
 .note .note-popup.open { 

@@ -3,33 +3,28 @@
 
 // event bubbling
 //https://gomakethings.com/getting-all-sibling-elements-when-a-link-or-button-is-clicked-with-vanilla-js
-/*
-  document.addEventListener("click", function(e) {
-    console.log(e.target);
-    if (!e.target.classList.contains('note-button')) return;
-    e.target.classList.add("open");
-    var notes = document.querySelectorAll(".note-button");
-    for (var i = 0; i < notes.length; i++) {
-      if (notes[i] === e.target) continue;
-
-      notes[i].classList.remove('open');
-    }
-  }); 
-*/
 
 document.addEventListener("click", function(e) {
   console.log(e.target);
   if (!e.target.classList.contains('note-button')) {
-    console.log(`the target element for this event does not have a note class, 
-    so this call is now aborting.`);
+    console.log(`the target element for this event does not have a note-button class, 
+    so this callback is now aborting.`);
+    var popups = document.querySelectorAll('.note-popup');
+    for (var i = 0; i < popups.length; i++) {
+      popups[i].classList.remove('open');
+    }
     return;
   }
-  e.target.classList.add("open-popup");
-  var notes = document.querySelectorAll(".note-button");
-  for (var i = 0; i < notes.length; i++) {
-    if (notes[i] === e.target) continue;
 
-    notes[i].classList.remove('open-popup');
+  var popup = e.target.parentElement.getElementsByClassName('note-popup')[0];
+  
+  popup.classList.add('open');
+
+  var allPopups = document.querySelectorAll(".note-popup");
+  for (var i = 0; i < allPopups.length; i++) {
+    if (allPopups[i] === popup) continue;
+
+    allPopups[i].classList.remove('open');
   }
 });
 
