@@ -3,7 +3,7 @@
 
 // this handler uses `event bubbling` by attaching to document
 
-//document.addEventListener("click", popupNote);
+document.addEventListener("click", popupNote);
 document.addEventListener("touchstart", popupNote);
 
 function popupNote(e) {
