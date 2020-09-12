@@ -56,6 +56,7 @@ body {
   /*visibility: hidden;*/
   display: none;
   border: 1px solid black;
+  padding: 8px;
 }
 
 .note > .open {

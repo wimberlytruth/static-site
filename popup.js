@@ -3,7 +3,10 @@
 
 // this handler uses `event bubbling` by attaching to document
 
-document.addEventListener("touchstart", function(e) {
+document.addEventListener("click", popupNote);
+document.addEventListener("touchstart", popupNote);
+
+function popupNote(e) {
   console.log(e.target);
 
   // querySelector and querySelectorAll use CSS selectors
@@ -32,8 +35,7 @@ document.addEventListener("touchstart", function(e) {
     popups[i].classList.remove('open');
     buttons[i].classList.remove('vanish');
   }
-
-});
+}
 
 //close popups when they're no longer in the viewport
 window.addEventListener("scroll", function() {
