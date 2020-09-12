@@ -71,6 +71,11 @@ body {
   display: none;
 }
 
+.note > .tip {
+  background: orange;
+  font-size: 10px;
+}
+
 /*.note-button:hover + .note-popup {
   visibility: visible;
 }
