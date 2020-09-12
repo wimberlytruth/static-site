@@ -1,42 +1,59 @@
 
+//https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/
 
+// this handler uses `event bubbling` by attaching to document
 
-// event bubbling
-//https://gomakethings.com/getting-all-sibling-elements-when-a-link-or-button-is-clicked-with-vanilla-js
-
-document.addEventListener("click", function(e) {
+document.addEventListener("touchstart", function(e) {
   console.log(e.target);
-  if (!e.target.classList.contains('note-button')) {
-    console.log(`the target element for this event does not have a note-button class, 
-    so this callback is now aborting.`);
-    var popups = document.querySelectorAll('.note-popup');
+
+  // querySelector and querySelectorAll use CSS selectors
+  var popups = document.querySelectorAll('.note .popup');
+  var buttons = document.querySelectorAll('.note .btn');
+
+  // when you click/touch any other element, the popups close
+  if (!e.target.classList.contains('btn')) {
     for (var i = 0; i < popups.length; i++) {
       popups[i].classList.remove('open');
+      buttons[i].classList.remove('vanish');
+      //tips[i].classList.remove('vanish');
     }
     return;
   }
 
-  var popup = e.target.parentElement.getElementsByClassName('note-popup')[0];
-  
-  popup.classList.add('open');
+// getElementsByClassName returns the element's children w/ the specified class
+  var currPopup = e.target.parentElement.getElementsByClassName('popup')[0];
+  var currBtn = e.target;
 
-  var allPopups = document.querySelectorAll(".note-popup");
-  for (var i = 0; i < allPopups.length; i++) {
-    if (allPopups[i] === popup) continue;
+  currPopup.classList.add('open');
+  currBtn.classList.add('vanish');
+ 
+  for (var i = 0; i < popups.length; i++) {
+    if (popups[i] === currPopup) continue;
+    popups[i].classList.remove('open');
+    buttons[i].classList.remove('vanish');
+  }
 
-    allPopups[i].classList.remove('open');
+});
+
+//close popups when they're no longer in the viewport
+window.addEventListener("scroll", function() {
+  var popups = document.querySelectorAll('.note .popup');
+  var buttons = document.querySelectorAll('.note .btn');
+  for (var i = 0; i < popups.length; i++) {
+    if (!isInViewport(popups[i])) {
+      popups[i].classList.remove('open');
+      buttons[i].classList.remove('vanish');
+    }
   }
 });
 
-//https://www.youtube.com/watch?v=YrE62Dzg4oM
-// var noteElements = document.querySelectorAll('.note');
-// for (var i = 0; i < noteElements.length; i++) {
-//   if
-// }
-
-/* what if i put all the notes into the javascript file.
-for every single html doc that contains notes?*/
-
-function show_and_hide() {
-
+//https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }

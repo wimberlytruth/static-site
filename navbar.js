@@ -11,4 +11,4 @@ window.addEventListener("scroll", function() {
     navbar.style.top = "0";
   }
   lastScrollTop = scrollTop;
-})
+});
