@@ -1,14 +1,16 @@
-
-//https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/
-
-// this handler uses `event bubbling` by attaching to document
-
+//https://stackoverflow.com/a/2915912
+//on mobile, both touchstart and click events are dispatched. Apparently this is why popups 
+//were not staying open on mobile devices -- the touchstart event is dispatched 300 milliseconds 
+//before the click event, and it seems that the touchstart event opened the popup only for the 
+//click event to immediately close it.
 if ('ontouchstart' in document.documentElement) {
   document.addEventListener("touchstart", popupNote);
 } else {
   document.addEventListener("click", popupNote);
 }
 
+//https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/
+// this handler uses `event bubbling` by attaching to document
 function popupNote(e) {
   // if (e.type === 'touchstart') {
   //   //alert('touchstart');
