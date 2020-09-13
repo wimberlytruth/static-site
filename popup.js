@@ -3,15 +3,18 @@
 
 // this handler uses `event bubbling` by attaching to document
 
-document.addEventListener("click", popupNote);
-document.addEventListener("touchstart", popupNote);
+if ('ontouchstart' in document.documentElement) {
+  document.addEventListener("touchstart", popupNote);
+} else {
+  document.addEventListener("click", popupNote);
+}
 
 function popupNote(e) {
-  if (e.type === 'touchstart') {
-    //alert('touchstart');
-    e.preventDefault();
-    e.stopPropagation();
-  }
+  // if (e.type === 'touchstart') {
+  //   //alert('touchstart');
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  // }
   console.log(e.target);
   console.log(e.type);
 
