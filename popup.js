@@ -8,6 +8,7 @@ document.addEventListener("touchstart", popupNote);
 
 function popupNote(e) {
   if (e.type === 'touchstart') {
+    alert('touchstart');
     e.preventDefault();
     e.stopPropagation();
   }
