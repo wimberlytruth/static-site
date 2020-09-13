@@ -3,11 +3,12 @@
 
 // this handler uses `event bubbling` by attaching to document
 
-//document.addEventListener("click", popupNote);
+document.addEventListener("click", popupNote);
 document.addEventListener("touchstart", popupNote);
 
 function popupNote(e) {
   console.log(e.target);
+  console.log(e.type);
 
   // querySelector and querySelectorAll use CSS selectors
   var popups = document.querySelectorAll('.note .popup');
