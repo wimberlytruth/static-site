@@ -13,7 +13,7 @@ if ('ontouchstart' in document.documentElement) {
 // this handler uses `event bubbling` by attaching to document
 function popupNote(e) {
   // if (e.type === 'touchstart') {
-  //   //alert('touchstart');
+  //   alert('touchstart event dispatched');
   //   e.preventDefault();
   //   e.stopPropagation();
   // }
@@ -29,7 +29,6 @@ function popupNote(e) {
     for (var i = 0; i < popups.length; i++) {
       popups[i].classList.remove('open');
       buttons[i].classList.remove('vanish');
-      //tips[i].classList.remove('vanish');
     }
     return;
   }
