@@ -1,0 +1,29 @@
+This is the basic command; the first argument is the file to apply the OCR to; the second argument is the output file.
+
+	tesseract page1.png page1 -l eng
+
+
+Here's a pair of shell scripts I used to OCR all of the png files in a directory. Each script is just a simple loop. I tried to combine them by using a conditional statement, but it failed and I don't think that going deep into bash/shell scripting is a good use of my time right now.
+
+The first loop is for the first 9 files. The second loop is for the rest of the files (10 and above).
+
+	for i in {1..9}
+	do
+  	  tesseract 1-0$i.png output$i -l eng
+	done
+
+	for i in {10..28}
+	do
+	  tesseract 1-$i.png output$i -l eng
+        done
+
+Here's another script for merging the text into a single file.
+
+        for i in {1..28}
+        do
+          cat output$i.txt >> all.txt
+        done
+
+
+        
+
